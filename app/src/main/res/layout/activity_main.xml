@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="2pt"
+    tools:context=".MainActivity">
+
+   <EditText
+       android:id="@+id/editText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10"
+       android:background="@color/gray"
+       android:layout_weight="1"
+       android:textSize="40pt"
+       android:inputType="textPersonName"
+       android:gravity="right|center"
+       android:text="0"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_AC"
+            android:layout_weight="1"
+            android:layout_width="30pt"
+            android:layout_height="30pt"
+            android:text="AC"
+            android:onClick="acEvent"
+            android:layout_marginRight="2pt"
+            android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_PlusMinus"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="+/-"
+
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Divide"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
+                android:background="@color/blueback"
+                android:onClick="operatorEvent"
+                android:text="/" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Multiply"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="*"
+                android:onClick="operatorEvent"
+                android:background="@color/design_default_color_secondary" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Seven"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="7"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Eight"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="8"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Nine"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="9"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Percent"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="%"
+                android:onClick="percentEvent"
+                android:background="@color/design_default_color_secondary"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Four"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="4"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Five"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="5"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Six"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="6"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Plus"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="+"
+                android:onClick="operatorEvent"
+                android:background="@color/design_default_color_secondary" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1pt">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_One"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="1"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Two"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="2"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Three"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="3"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Minus"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text="-"
+                android:onClick="operatorEvent"
+                android:background="@color/design_default_color_secondary" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Zero"
+                android:layout_weight="1"
+                android:layout_width="50pt"
+                android:layout_height="30pt"
+                android:text="0"
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Point"
+                android:layout_weight="1"
+                android:layout_width="53pt"
+                android:layout_height="30pt"
+                android:text="."
+                android:onClick="numberEvent"
+                android:layout_marginRight="2pt"
+                android:background="@color/blueback" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Equals"
+                android:layout_weight="1"
+                android:layout_width="30pt"
+                android:layout_height="30pt"
+                android:text= "="
+                android:onClick="equalEvent"
+                android:background="@color/design_default_color_secondary" />
+
+    </LinearLayout>
+
+</LinearLayout>
